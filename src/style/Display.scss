@@ -1,0 +1,34 @@
+.display{
+    margin: 0px;
+    height: 80px;
+    box-sizing: border-box;
+    .outputScreen{
+        width: 100%;
+        height: 70%;
+        margin: 0px;
+        padding: 5px;
+        box-sizing: border-box;
+        font-size: 29px;
+        font-family: digital;
+        color: white;
+        text-align: right;
+        line-height: 35px;
+    }
+    .formulaScreen{
+        width: 100%;
+        height: 30%;
+        margin: 0px;
+        padding: 5px;
+        box-sizing: border-box;
+        min-height: 20px;
+        font-family: digital;
+        font-size: 20px;
+        color: orange;
+        text-align: right;
+        vertical-align: text-top;
+        line-height: 20px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+}
