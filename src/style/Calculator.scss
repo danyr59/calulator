@@ -1,58 +1,54 @@
-$ac-background: rgb(172,57,57);
-$signos-background: rgb(102,102,102);
-$equal-background: rgb(0,68,102);
-@mixin background-buttoms($i,$color){
-    .colors-#{$i} {
-        background-color: $color;
-    }
+$ac-background: rgb(172, 57, 57);
+$signos-background: rgb(102, 102, 102);
+$equal-background: rgb(0, 68, 102);
+@mixin background-buttoms($i, $color) {
+  .colors-#{$i} {
+    background-color: $color;
+    box-sizing: border-box;
+  }
 }
 
-.calculator{
-    border: 2px solid #47476b;
-    padding: 5px;
-    background: black;
-
+.calculator {
+  border: 2px solid #47476b;
+  padding: 5px;
+  background: black;
+  width: 320px;
 }
-.calculator-container{
-    display: grid;
-    grid-template-columns: 80px 80px 80px 80px ;
-    grid-template-rows: 65px 65px 65px 65px 65px; 
-    justify-items: center;
+.calculator-container {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 65px 65px 65px 65px 65px;
+  justify-items: center;
+  align-items: center;
+  buttom {
+    padding: 1px 6px;
+    display: flex;
+    box-sizing: border-box;
     align-items: center;
-    buttom{
-        display:flex;
-        box-sizing: border-box;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        color: white;
-        outline: 1px solid black;
-        border: none;
-        background: #4d4d4d;
-        font-family: Share Tech Mono, monospace;
-        font-size: 20px;
-        cursor: default;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    outline: 1px solid black;
+    border: none;
+    background: #4d4d4d;
+    font-family: Share Tech Mono, monospace;
+    font-size: 20px;
+    cursor: default;
+  }
+  @for $i from 0 through 16 {
+    @if $i == 0 {
+      @include background-buttoms($i, $ac-background);
+    } @else if $i == 1 {
+      @include background-buttoms($i, $signos-background);
+    } @else if $i == 2 {
+      @include background-buttoms($i, $signos-background);
+    } @else if $i == 6 {
+      @include background-buttoms($i, $signos-background);
+    } @else if $i == 10 {
+      @include background-buttoms($i, $signos-background);
+    } @else if $i == 14 {
+      @include background-buttoms($i, $equal-background);
     }
-    @for $i from 0 through 16{
-        @if $i == 0 {
-            @include background-buttoms($i,$ac-background);
-        }
-        @else if $i == 1 {
-            @include background-buttoms($i,$signos-background);
-        }
-         @else if $i == 2 {
-            @include background-buttoms($i,$signos-background);
-        }     
-        @else if $i == 6 {
-            @include background-buttoms($i,$signos-background);
-        }
-        @else if $i == 10 {
-            @include background-buttoms($i,$signos-background);
-        }
-        @else if $i == 14 {
-            @include background-buttoms($i,$equal-background);
-        }
-
-    }
-}   
+  }
+}
