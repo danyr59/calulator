@@ -6,7 +6,7 @@ const Display = (props) => {
       <div className="formulaScreen" translate="no">
         {props.formula}
       </div>
-      <div className="outputScreen" translate="no">
+      <div id="display" className="outputScreen" translate="no">
         {props.currentValue}
       </div>
     </div>
